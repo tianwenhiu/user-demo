@@ -70,8 +70,7 @@ const Users = () => {
             }
         });
     };
-
-
+     
     let imgs: Array<string> = [];
     list.map((item) => imgs.push(item.avatar || ''));
 
@@ -117,7 +116,7 @@ const Users = () => {
                 dataIndex: 'birthDate',
                 align: 'center',
                 width: 150,
-                sorter: true,
+                sorter:(a,b) => (a.birthDate || 0) - (b.birthDate || 0),
                 render: (birthDate) => U.date.format(new Date(birthDate), 'yyyy-MM-dd')
             }, {
                 title: '操作',
