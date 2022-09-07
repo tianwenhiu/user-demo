@@ -10,6 +10,9 @@ const Home = () => {
 
         <Row gutter={20}>
             <Col>
+            <img src={require("../image/image001.png")} />
+            </Col>
+            <Col>
                 <Button type="primary" onClick={() => navigate('/users')}>用户列表</Button>
             </Col>
             <Col>
